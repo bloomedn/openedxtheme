@@ -1,0 +1,106 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+<%namespace name='static' file='../static_content.html'/>
+
+<%block name="pagetitle">${_("Jobs")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="aboutContainer jobsContainer">
+
+        <div class="stBd containerBox">
+            <div class="bRow">
+                <div class="bCol bCol-d-6 bCol-m-12">
+                    <div class="stBdContent stBdContentLeft">
+                        <div class="sbcTitle vLarge">
+                            <h2> Join Us!</h2>
+                        </div>
+                        <div class="sbcBody">
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi saepe, magni veritatis alias, neque deleniti cumque fugiat voluptatem quis, animi quae est nesciunt expedita assumenda dicta. Id tenetur assumenda debitis.
+                            </p>
+
+                            <p class="moreAbout">
+                                <a href="/about">More About Us</a>
+                            </p>
+
+                        </div>
+                    </div>                    
+                </div>
+                <div class="bCol bCol-d-6 bCol-m-12">
+                    <div class="stBdContent stBdContentRight">
+                        <img src="${static.url('images/backgroundCreative1.png')}" alt="Background Creative">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="threeColsBox containerBox">
+            <div class="bRow">
+
+                <div class="bCol-d-4 bCol-m-12">
+                    <div class="ctaBox ctaBox1">
+                        <div class="ctaImg">
+                            <img src="${static.url('images/internship.png')}">
+                        </div>
+                        <div class="ctaTitle">
+                            Internship
+                        </div>
+                        <div class="ctaPara">
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <div class="ctaBtn">
+                            <a href="#"> Check Openings </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bCol-d-4 bCol-m-12">
+                    <div class="ctaBox ctaBox2">
+                        <div class="ctaImg">
+                            <img src="${static.url('images/volunteer.png')}">
+                        </div>
+                        <div class="ctaTitle">
+                            Volunteer
+                        </div>
+                        <div class="ctaPara">
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <div class="ctaBtn">
+                            <a href="#"> Check Openings </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bCol-d-4 bCol-m-12">
+                    <div class="ctaBox ctaBox3">
+                        <div class="ctaImg">
+                            <img src="${static.url('images/probono.png')}">
+                        </div>
+                        <div class="ctaTitle">
+                            Pro Bono
+                        </div>
+                        <div class="ctaPara">
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <div class="ctaBtn">
+                            <a href="#"> Check Openings </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+</main>

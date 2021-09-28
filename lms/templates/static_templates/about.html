@@ -1,0 +1,595 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+<%namespace name='static' file='../static_content.html'/>
+
+<%block name="pagetitle">${_("About Us")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="aboutContainer">
+        <div class="staticHeader1 aboutHeader">
+            <div class="abhA">
+                <h1>
+                    Who We Are.
+                </h1>
+            </div>
+            <div class="abhB">
+                <h4>
+                    We deliver quality education to <span class="redColor"> everyone, everywhere </span>
+                </h4>
+            </div>
+
+        </div>
+
+        <div class="staticBody staticBody1">
+            <div class="bRow">
+                <div class="bCol bCol-d-6 bCol-m-12">
+                    <div class="sbContent sbContentLeft">
+                        <div class="sbcTitle">
+                            <h2> Impact Story & Timeline</h2>
+                        </div>
+                        <div class="sbcBody">
+                            <p>
+                                In 2020, when Corona Pandemic hit the nation, many children stayed out of school and education for an elongated period of time.  BloomED came in to close access gaps and provide quality engagement with learning even when away from teachers or the school. 
+                            </p>
+                            <p>
+                                We have moved many steps further now. BloomED is a personalized tutor for all learning needs. All our resources are available for free except when needing to get support from a teacher.
+                            </p>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="bCol bCol-d-6 bCol-m-12">
+                    <div class="sbContent sbContentRight">
+                        <img src="${static.url('images/aboutUsblock.jpeg')}" alt="BloomED Group">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blmTimeline">
+            <div class="tmlLeft">
+                <div class="dateVal dateValLeft">
+                    <h4 class="dateValText">
+                        May 2020
+                    </h4>
+                </div>
+                <div class="tmlDescBox">
+                    <div class="tdbLeft">
+                        <h4>
+                            BloomED go<span class="uLine">es live</span>
+                        </h4>
+                        <p>
+                            BloomED goes live featuring seven online courses from class 10 for SEE preparation
+                        </p>
+                    </div>
+                    <div class="tdbRight">
+                        <img src="${static.url('images/www.png')}" alt="www">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tmlDivider">
+                <div class="tmlPointer tmlPointer1"></div>
+                <div class="tmlPntrSmall tmlPntrSmall1"></div>
+                <div class="verticalLine"></div>
+                <div class="tmlPntrSmall tmlPntrSmall2"></div>
+                <div class="tmlPointer tmlPointer2"></div>
+            </div>
+
+            <div class="tmlRight">
+                <div class="tmlDescBox">
+                    <div class="tdbLeft">
+                        <img src="${static.url('images/lightBulb.png')}" alt="lightBulb">
+                    </div>
+                    <div class="tdbRight">
+                        <h4>
+                            <span class="uLine">Bloom</span>ED was born
+                        </h4>
+                        <p>
+                            Amidst the Corona pandemic, the idea for an accessible online learning platform was born
+                        </p>
+                    </div>
+                </div>
+                <div class="dateVal dateValRight">
+                    <h4 class="dateValText">
+                        March 2021
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="staticBody staticBody2">
+            <div class="bRow">
+                <div class="bCol bCol-d-6 bCol-m-12">
+                    <div class="sbContent sbContentLeft">
+                        <img src="${static.url('images/portrait.jpeg')}" alt="BloomED Group">
+                    </div>
+                </div>
+                <div class="bCol bCol-d-6 bCol-m-12 posRel">
+                    <div class="sbContent sbContentRight">
+                        <div class="sbcTitle">
+                            <h2> OUR MISSION</h2>
+                        </div>
+                        <div class="sbcBody">
+                            <p>
+                                Our actions, policies and dedication are squarely dictated by our mission of:
+                            </p>
+                            <ul>
+                                <li>
+                                    Provide universal access to affordable and high-quality education for everyone.  
+                                </li>
+                                <li>
+                                    Make learning entirely personalized.
+                                </li>
+                                <li>
+                                    Blend classroom and online learning.  
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mIconBox">
+                        <ul>
+                            <li>
+                                <img src="${static.url('images/missionIcon1.png')}" alt="BloomED Mission">
+                            </li>
+                            <li>
+                                <img src="${static.url('images/missionIcon2.png')}" alt="BloomED Mission">
+                            </li>
+                            <li>
+                                <img src="${static.url('images/missionIcon3.png')}" alt="BloomED Mission">
+                            </li>
+                        </ul>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+
+        <div class="partnersBox">
+            <div class="pbTitle stPBTitle">
+                <h2>
+                    Our Partners
+                </h2>
+            </div>
+            <div class="bRow">
+                <div class="partnerBlock partnerBlock1">
+                    <img src="${static.url('images/BNFLogo.png')}" alt="BNF Logo">
+                </div>
+                <div class="partnerBlock partnerBlock2">
+                    <img src="${static.url('images/BNSLogo.png')}" alt="BNS Logo">
+                </div>
+            </div>
+        </div>
+
+        <div class="ourTeamBox">
+            <div class="stPBTitle">
+                <h2>
+                    Meet Our Team
+                </h2>
+            </div>            
+            <div class="ourTeam">
+                <div class="bTab">
+                    <a class="tablinks active" href="Advisors">Advisors</a>
+                    <a class="tablinks" href="BoardMembers">Board Members</a>
+                    <a class="tablinks" href="OperationsTeam">Operations Team</a>
+                    <a class="tablinks" href="InternsVolunteers">Interns & Volunteers</a>
+                    <a class="tablinks" href="AllMembers">All</a>
+                </div>
+                
+                <!-- Tab content -->
+                <div id="Advisors" class="tabcontent tabcontent1">
+                    <div class="bRow">
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic1.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum X 
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic1.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum Y
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic1.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum Z
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic1.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum Y
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="BoardMembers" class="tabcontent tabcontent2">
+                    <div class="bRow">
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic2.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum A
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic1.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum C
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic1.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum B
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic1.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum Y
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                        <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="OperationsTeam" class="tabcontent tabcontent3">
+                    <div class="bRow">
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic2.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum R
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic1.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum Q
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic1.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum P
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic2.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum R
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="InternsVolunteers" class="tabcontent tabcontent4">
+                    <div class="bRow">
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic3.jpg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum R
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic1.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum Q
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic1.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum P
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic2.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum R
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="AllMembers" class="tabcontent tabcontent5">
+                    <div class="bRow">
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic2.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum R
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic1.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum Q
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic3.jpg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum P
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic2.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum R
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic3.jpg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum R
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic1.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum Q
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic1.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum P
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="teamMember teamMember1">
+                            <div class="mbPhoto">
+                                <img src="${static.url('images/profilePic2.jpeg')}" alt="profile Pic">
+                            </div>
+                            <div class="mbName">
+                                <h4>
+                                    Lorem Ipsum R
+                                </h4>
+                            </div>
+                            <div class="mbTitle">LOREM IPSUM</div>
+                            <div class="mbDesc">
+                                <p>
+                                    Lorem ipsum dolor sit
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+</main>

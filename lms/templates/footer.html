@@ -10,156 +10,6 @@
 <% icp_license_info = getattr(settings, 'ICP_LICENSE_INFO', {})%>
 <%namespace name='static' file='static_content.html'/>
 
-## % if uses_bootstrap:
-##   <div class="container-fluid wrapper-footer">
-##     <footer>
-##       <div class="row">
-##         <div class="col-md-9">
-##           <nav class="navbar site-nav navbar-expand-sm" aria-label="${_('About')}">
-##             <ul class="navbar-nav">
-##               % for item_num, link in enumerate(footer['navigation_links'], start=1):
-##                 <li class="nav-item">
-##                   <a class="nav-link" href="${link['url']}">${link['title']}</a>
-##                 </li>
-##               % endfor
-##             </ul>
-##           </nav>
-
-##           <div class="wrapper-logo">
-##             <p>
-##               <a href="/">
-##                 ## The default logo is a placeholder.
-##                 ## You can either replace this link entirely or update
-##                 ## the FOOTER_ORGANIZATION_IMAGE in Django settings.
-##                 ## If you customize FOOTER_ORGANIZATION_IMAGE, then the image
-##                 ## can be included in the footer on other sites
-##                 ## (e.g. a blog or marketing front-end) to provide a consistent
-##                 ## user experience.  See the branding app for details.
-##                 <img alt="${_('organization logo')}" src="${footer['logo_image']}">
-##               </a>
-##             </p>
-##           </div>
-
-##           Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
-##           <p class="copyright">${footer['copyright']}
-##                % if icp_license_info.get('icp_license'):
-##                 ${u" | {text}".format(text=icp_license_info.get('text'))}
-##                 <a href="${icp_license_info.get('icp_license_link', '#')}">
-##                     ${u" {icp}".format(icp=icp_license_info.get('icp_license'))}
-##                 </a>
-##               % endif
-##           </p>
-
-##           <nav class="navbar legal-nav navbar-expand-sm" aria-label="${_('Legal')}">
-##             <ul class="navbar-nav">
-##               % for item_num, link in enumerate(footer['legal_links'], start=1):
-##                 <li class="nav-item">
-##                   <a class="nav-link" href="${link['url']}">${link['title']}</a>
-##                 </li>
-##               % endfor
-##               <li class="nav-item">
-##                 <a class="nav-link" href="${footer['edx_org_link']['url']}">${footer['edx_org_link']['text']}</a>
-##               </li>
-##             </ul>
-##           </nav>
-##         </div>
-##         <div class="col-md-3">
-##           ## Please leave this link and use one of the logos provided
-##           ## The OpenEdX link may be hidden when this view is served
-##           ## through an API to partner sites (such as marketing sites or blogs),
-##           ## which are not technically powered by Open edX.
-##           % if not hide_openedx_link:
-##             <div class="footer-about-openedx">
-##               <p>
-##                 <a href="${footer['openedx_link']['url']}">
-##                   <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
-##                 </a>
-##               </p>
-##             </div>
-##           % endif
-##         </div>
-##       </div>
-##     </footer>
-##   </div>
-## % else:
-##   <div class="wrapper wrapper-footer">
-##     <footer id="footer-openedx" class="grid-container"
-##       ## When rendering the footer through the branding API,
-##       ## the direction may not be set on the parent element,
-##       ## so we set it here.
-##       % if bidi:
-##         dir=${bidi}
-##       % endif
-##     >
-##       <div class="colophon">
-##         <nav class="nav-colophon" aria-label="${_('About')}">
-##           <ol>
-##               % for item_num, link in enumerate(footer['navigation_links'], start=1):
-##               <li class="nav-colophon-0${item_num}">
-##                 <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
-##               </li>
-##               % endfor
-##           </ol>
-##         </nav>
-
-##         % if context.get('include_language_selector', footer_language_selector_is_enabled()):
-##             <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
-##         % endif
-
-##         <div class="wrapper-logo">
-##           <p>
-##             <a href="/">
-##               ## The default logo is a placeholder.
-##               ## You can either replace this link entirely or update
-##               ## the FOOTER_ORGANIZATION_IMAGE in Django settings.
-##               ## If you customize FOOTER_ORGANIZATION_IMAGE, then the image
-##               ## can be included in the footer on other sites
-##               ## (e.g. a blog or marketing front-end) to provide a consistent
-##               ## user experience.  See the branding app for details.
-##               <img alt="${_('organization logo')}" src="${footer['logo_image']}">
-##             </a>
-##           </p>
-##         </div>
-
-##         Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
-##           <p class="copyright">${footer['copyright']}
-##               % if icp_license_info.get('icp_license'):
-##                 ${u" | {text}".format(text=icp_license_info.get('text'))}
-##                 <a href="${icp_license_info.get('icp_license_link', '#')}">
-##                     ${u" {icp}".format(icp=icp_license_info.get('icp_license'))}
-##                 </a>
-##               % endif
-##           </p>
-
-##         <nav class="nav-legal" aria-label="${_('Legal')}">
-##           <ul>
-##             % for item_num, link in enumerate(footer['legal_links'], start=1):
-##               <li class="nav-legal-0${item_num}">
-##                 <a href="${link['url']}">${link['title']}</a>
-##               </li>
-##             % endfor
-##             <li><a href="${footer['edx_org_link']['url']}">${footer['edx_org_link']['text']}</a></li>
-##           </ul>
-##         </nav>
-##       </div>
-
-##       Please leave this link and use one of the logos provided
-##       The OpenEdX link may be hidden when this view is served
-##       through an API to partner sites (such as marketing sites or blogs),
-##       which are not technically powered by OpenEdX.
-##       % if not hide_openedx_link:
-##       <div class="footer-about-openedx">
-##         <p>
-##           <a href="${footer['openedx_link']['url']}">
-##             <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
-##           </a>
-##         </p>
-##       </div>
-##       % endif
-##     </footer>
-##   </div>
-## % endif
-
 <section id="bloomFooter">
   <footer>
     <div class="containerBox">
@@ -173,16 +23,13 @@
                   <h4>BloomED</h4>
                   <ul class="footerMenu">
                     <li>
-                      <a href="/about">About BloomED</a>
+                      <a href="https://bloomed.org.np/about">About BloomED</a>
                     </li>
                     <li>
-                      <a href="/jobs">Careers</a>
+                      <a href="https://bloomed.org.np/jobs">Careers</a>
                     </li>
                     <li>
-                      <a href="/jobs">Internships</a>
-                    </li>
-                    <li>
-                      <a href="/blog">Blog</a>
+                      <a href="https://bloomed.org.np/blogs">Blog</a>
                     </li>
                   </ul>
                 </div>
@@ -192,13 +39,10 @@
                   <h4>Support</h4>
                   <ul class="footerMenu">
                     <li>
-                      <a href="/help">Help Center</a>
+                      <a href="https://bloomed.org.np/faq">Help Center</a>
                     </li>
                     <li>
-                      <a href="/contact">Contact Us</a>
-                    </li>
-                    <li>
-                      <a href="/faq">FAQs</a>
+                      <a href="https://bloomed.org.np/contact">Contact Us</a>
                     </li>
                   </ul>
                 </div>            
@@ -208,13 +52,13 @@
                   <h4>Connect</h4>
                   <ul class="footerMenu">
                     <li>
-                      <a href="/donate">Donate</a>
+                      <a href="https://bloomed.org.np/donate">Donate</a>
                     </li>
                     <li>
-                      <a href="/honor">Teach on BloomED</a>
+                      <a href="https://bloomed.org.np/honor">Teach on BloomED</a>
                     </li>
                     <li>
-                      <a href="/contact">Submit Suggestions</a>
+                      <a href="https://bloomed.org.np/contact#suggestions">Submit Suggestions</a>
                     </li>
                   </ul>
                 </div>            
@@ -232,7 +76,7 @@
               </div>
               <div class="ftrPara2">
                 <p>
-                  <a href="/donate">Donate,</a> <a href="#">Volunteer</a> or <a href="#">provide Pro Bono</a> support today.
+                  <a href="https://bloomed.org.np/donate">Donate,</a> <a href="https://bloomed.org.np/careers">Volunteer</a> or <a href="https://bloomed.org.np/careers">provide Pro Bono</a> support today.
                 </p>
               </div>
             </div>
@@ -256,13 +100,13 @@
               &copy; 2020 BloomED
             </span>
             <span>
-              <a href="/tos"> Terms of use </a>
+              <a href="https://bloomed.org.np/terms-of-use"> Terms of use </a>
             </span>
             <span>
-              <a href="/privacy">Privacy Policy</a>
+              <a href="https://bloomed.org.np/privacy">Privacy Policy</a>
             </span>
             <span>
-              <a href="/honor">Academic Honor Code</a>
+              <a href="https://bloomed.org.np/honor">Academic Honor Code</a>
             </span>
           </div>
           </div>
@@ -271,16 +115,13 @@
           <div class="contentBox rightContentBox">
             <div class="socialMediaIcons">
               <span class="socialLink LinkedIn">
-                <a href="#">LinkedIn</a>
+                <a href="https://www.linkedin.com/company/bloomeducation">LinkedIn</a>
               </span>
-              <span class="socialLink Twitter">
-                <a href="#">Twitter</a>
-              </span>
-              <span class="socialLink Instagram">
-                <a href="#">Instagram</a>
+              <span class="socialLink Youtube">
+                <a href="https://www.youtube.com/channel/UCmy68A77Pl7-EJ4d7uginXg/playlists">Youtube</a>
               </span>
               <span class="socialLink Facebook">
-                <a href="#">Facebook</a>
+                <a href="https://facebook.com/BloomEDLearning">Facebook</a>
               </span>
             </div>
           </div>
